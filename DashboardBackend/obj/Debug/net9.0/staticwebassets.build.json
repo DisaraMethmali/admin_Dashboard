@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "jYWfMULpIyOrJ1tkkbQob83LgirT8Blryita4vkApvQ=",
+  "Source": "DashboardBackend",
+  "BasePath": "_content/DashboardBackend",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
