@@ -1,17 +1,23 @@
 using Microsoft.AspNetCore.Mvc;
+using UserManagementAPI.Models;
 
-[ApiController]
-[Route("api/[controller]")]
-public class UsersController : ControllerBase
+namespace UserManagementAPI.Controllers
 {
-    [HttpGet]
-    public IActionResult GetUsers()
+    [Route("api/[controller]")]
+    [ApiController]
+    public class UsersController : ControllerBase
     {
-        var users = new[]
+        [HttpGet]
+        public IActionResult GetUsers()
         {
-            new { FirstName = "John", LastName = "Doe", Address = "123 Elm Street", Mobile = "555-1234", Email = "john.doe@example.com", Department = "Sales", Designation = "Manager", Updated = "2024-05-08 1:45PM", Number = 1 },
-            // Add more users here
-        };
-        return Ok(users);
+            var users = new List<User>
+            {
+                new User { FirstName = "John", LastName = "Doe", Email = "john.doe@example.com" },
+                new User { FirstName = "Jane", LastName = "Smith", Email = "jane.smith@example.com" },
+                new User { FirstName = "Alice", LastName = "Johnson", Email = "alice.johnson@example.com" },
+            };
+
+            return Ok(users);
+        }
     }
 }

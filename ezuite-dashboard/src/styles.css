@@ -1,60 +1,175 @@
 
+/* Global settings */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
-  display: flex;
-  height: 100vh;
+  background-color: #f0f0f0; 
 }
+
+/* Dashboard container styling */
 .dashboard-container {
   display: flex;
+  height: 115vh;
+}
+/* Top bar inside the sidebar */
+/* Top Bar Styles */
+
+.top-bar {
   width: 100%;
+  background: linear-gradient(to right, #66b3ff, #003366); /* Light to dark blue gradient */
+  height: 50px; /* Set height to 100px */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10; /* Ensure top bar is above other content */
 }
-.sidebar {
-  width: 20%;
-  background: #003366;
+
+
+.top-bar i {
+  font-size: 20px;
   color: white;
-  padding: 20px;
+ 
+  padding: 10px;
+  cursor: pointer;
 }
+
+.drafts .circle {
+   /* Circle background color */
+  color: rgb(14, 13, 13);
+  font-size: 14px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  text-align: center;
+  border: 2px solid black; 
+  line-height: 20px;
+  margin-left: 8px; /* Space between text and circle */
+}
+.drafts {
+  font-size: 16px;
+  color: rgb(17, 17, 17);
+  margin-right: 15px; /* Space between each drafts item */
+  display: flex;
+  align-items: center;
+}
+/* Sidebar styling */
+.sidebar {
+  width: 80px; /* Sidebar width increased to 100px */
+  background: linear-gradient(to bottom, #003366, #66b3ff); /* Dark blue to light blue gradient */
+  color: white;
+  height: 105vh;
+  padding-top: 40px; /* Adjusted padding for top */
+  display: flex;
+  flex-direction: column;
+  
+  align-items: center; /* Centering icons and text */
+}
+
+.sidebar .logo {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+
+
+.sidebar .menu a {
+  color: white;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar .menu a i {
+  font-size: 24px; /* Adjusted icon size */
+  margin-bottom: 5px;
+}
+
+.sidebar .menu a:hover {
+  color: #ffcc00; /* Add hover effect color */
+}
+
+
+
 .logo {
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 20px;
+  padding-left: 20px;
 }
+
 .menu {
-  list-style: none;
-  padding: 0;
+  list-style-type: none;
+  padding-left: 0;
 }
+
 .menu li {
-  margin-bottom: 10px;
+  margin: 10px 0;
 }
-.menu a {
+
+.menu li a {
   color: white;
   text-decoration: none;
-}
-.main-content {
-  width: 80%;
-  padding: 20px;
-}
-.header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  font-size: 14px;
+  padding-left: 20px;
+}
+
+.menu li a:hover {
+  background-color: #007bff;
+  padding-left: 30px;
+  transition: padding-left 0.2s ease;
+}
+
+.menu li a i {
+  margin-right: 15px;
+}
+
+/* Table Section */
+.table-container {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #ffffff;
+  overflow-y: auto;
+  margin-top: 40px;
+}
+
+.table-heading {
+  font-size: 24px;
+  color: #007bff;
   margin-bottom: 20px;
 }
-.search-bar {
-  padding: 5px;
-  width: 200px;
+
+/* Table styling */
+.table th, .table td {
+  border-right: none !important;
+  border-left: none !important;
+  font-size: 12px;
 }
-table {
-  width: 100%;
-  border-collapse: collapse;
+
+.table thead th {
+  border-bottom: 2px solid #dee2e6 !important;
 }
-th, td {
-  border: 1px solid #ddd;
-  padding: 8px;
-  text-align: left;
+
+.table-striped tbody tr:nth-child(odd) {
+  background-color: #f9f9f9;
 }
-th {
-  background-color: #f4f4f4;
+
+.table-striped tbody tr:nth-child(even) {
+  background-color: #fff;
+}
+
+/* Optional: Add some padding for table data */
+.table td {
+  padding: 8px 15px;
 }

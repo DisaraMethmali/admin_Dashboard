@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DashboardBackend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c8e8d4f36c18b3053ab898321d442318fb321519")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+882de6bce73f909b0f91f0cdb994fbe2ece08376")]
 [assembly: System.Reflection.AssemblyProductAttribute("DashboardBackend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DashboardBackend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
